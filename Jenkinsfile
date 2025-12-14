@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'mcr.microsoft.com/dotnet/sdk:6.0'
+            label 'docker'  // Ensure your Jenkins agents support Docker
+        }
+    }
 
     stages {
         stage('Restore') {
