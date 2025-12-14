@@ -5,19 +5,19 @@ pipeline {
         stage('Restore') {
             steps {
                 echo 'Restoring...'
-                dotnet restore
+                sh 'dotnet restore'
             }
         }
         stage('Build') {
             steps {
                 echo 'Building...'
-                dotnet build --no-restore
+                sh 'dotnet build --no-restore'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                dotnet test --no-build --verbosity normal
+                sh 'dotnet test --no-build --verbosity normal'
             }
         }
     }
