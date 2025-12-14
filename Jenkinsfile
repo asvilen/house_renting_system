@@ -2,7 +2,6 @@ pipeline {
     agent {
         dockerContainer {
             image 'mcr.microsoft.com/dotnet/sdk:6.0'
-            label 'docker'  // Ensure your Jenkins agents support Docker
         }
     }
 
