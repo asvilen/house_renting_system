@@ -2,7 +2,7 @@ name: Start unittests in Develop
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "staging" ]
 
 jobs:
   build:
@@ -20,4 +20,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal --filter TestCategory=Unit
+      run: dotnet test --no-build --verbosity normal --filter TestCategory=Integration
