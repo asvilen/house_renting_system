@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools {
-        dotnetsdk 'MyNET10'  // Name you give in Global Tool Configuration
-    }
 
     stages {
         stage('Restore') {
